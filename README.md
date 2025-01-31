@@ -17,7 +17,7 @@ A web application that visualizes a user's remaining time based on their birthda
 ---
 
 ## **Demo**  
-[Live Demo (if available)](https://example.com)  
+[Live Demo (not yet available)](https://example.com)  
 
 ---
 
