@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Grid - Memento Mori</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .week-box {
+            width: 10px;
+            height: 10px;
+            margin: 1px;
+            display: inline-block;
+        }
+        .past { background-color: blue; }
+        .future { background-color: gray; }
+    </style>
+</head>
+<body class="bg-dark text-light">
+    <div class="container text-center mt-5">
+        <h1>Memento Mori: Your Life in Weeks</h1>
+        <p>{{ life_completion }}% of your life is complete.</p>
+        <div class="grid">
+            {% for i in range(total_weeks) %}
+                {% if i < weeks_lived %}
+                    <span class="week-box past"></span>
+                {% else %}
+                    <span class="week-box future"></span>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
