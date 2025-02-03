@@ -18,6 +18,14 @@
     </style>
 </head>
 <body class="bg-dark text-light">
+    <!--Progress Bar-->
+    <div class="progress mt-3">
+        <div class="progress-bar bg-primary" role="progressbar" style="width: {{ life_completion }}%;" 
+            aria-valuenow="{{ life_completion }}" aria-valuemin="0" aria-valuemax="100">
+            {{ life_completion }}%
+        </div>
+    </div>
+    
     <div class="container text-center mt-5">
         <h1>Memento Mori: Your Life in Weeks</h1>
         <p>{{ life_completion }}% of your life is complete.</p>
