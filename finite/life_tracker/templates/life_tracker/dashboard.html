@@ -39,13 +39,29 @@
             {% endfor %}
         </div>
     </div>
+    <!--Stoic Quotes-->
+    <div class="mt-4">
+        <h3>Stoic Reflection:</h3>
+        <blockquote id="stoic-quote"></blockquote>
+    </div>
     <!--Toggle button for dark / light mode-->
     <button class="btn btn-light mt-3" id="dark-mode-toggle">Toggle Dark Mode</button>
+    <!--Script for button toggle-->
     <script>
         document.getElementById('dark-mode-toggle').addEventListener('click', function() {
             document.body.classList.toggle('bg-dark');
             document.body.classList.toggle('text-light');
         });
     </script>
+    <!--Script for displaying Stoic Quotes-->
+    <script>
+        const quotes = [
+            "You could leave life right now. Let that determine what you do and say and think. - Marcus Aurelius",
+            "It is not that we have a short time to live, but that we waste a lot of it. - Seneca",
+            "We suffer more in imagination than in reality. - Seneca",
+            "No man has the power to have everything he wants, but he has the power not to want what he has. - Seneca",
+        ];
+        document.getElementById("stoic-quote").innerText = quotes[Math.floor(Math.random() * quotes.length)];
+    </script> 
 </body>
 </html>
